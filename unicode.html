@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FoC</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            text-align: center;
+        }
+        section {
+            text-align: center;
+            margin: 20px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        hr {
+            border: 1px solid black;
+        }
+        p {
+            margin: 10px;
+        }
+        input[type="text"] {
+            padding: 5px;
+        }
+        button {
+            background-color: #4C8BF5;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        table {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        th {
+            text-align: center;
+        }
+        img {
+            width: 700px;
+            height: 400px;
+        }
+        center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Project 1: UNICODE</h2>
+        <hr>
+        <center>
+            <p>Please input UNICODE number:</p>
+            <input id="numb" type="text">
+            <button type="button" onclick="myFunction()">Submit</button>
+            <br>
+            <table>
+                <tr>
+                    <th>
+                        <center><p id="demo"></p></center>
+                    </th>
+                </tr>
+            </table>
+            <p><img src="uni1.jpg"></p>
+            <p><img src="uni3.jpg"></p>
+            <p><img src="uni4.jpg"></p>
+            <p></p>
+            <p></p>
+            <br>
+        </center>
+        <script>
+            function myFunction() {
+                var x, text;
+                x = document.getElementById("numb").value;
+                text = x;
+                unicode = ("&#x" + x);
+                document.getElementById("demo").innerHTML = unicode;
+            }
+        </script>
+    </section>
+    <a href="index.html">Back to Home</a>
+    <footer>
+        <p>@ Powered by UB</p>
+    </footer>
+</body>
+</html>
